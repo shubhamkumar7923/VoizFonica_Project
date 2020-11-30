@@ -1,0 +1,74 @@
+<html>
+  <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="body">
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <h2 style="text-align:center;color: darkmagenta;">Payment Details</h2>
+        
+        <div class="icon-container">
+          <h3>Accepted Cards</h3>
+          <i class="fa fa-cc-visa" style="color:navy;"></i>&nbsp;
+          <i class="fa fa-cc-amex" style="color:blue;"></i>&nbsp;
+          <i class="fa fa-cc-mastercard" style="color:red;"></i>&nbsp;
+          <i class="fa fa-cc-discover" style="color:orange;"></i>&nbsp;
+        </div>
+        <form #payform="ngForm" (ngSubmit)="onPay(postpaid.id)">
+          <div class="form-group">
+            <label for="name"><i class=" fa fa-user"></i>&nbsp;Name</label>
+            <input type="text" class="form-control" id="name" required pattern= "[A-Za-z]+"  value="{{emp.name}}" required [(ngModel)]="payment.name" name="name"  >
+          </div>
+      
+          <div class="form-group">
+            <label for="name"><i class=" fa fa-envelope" style="font-size:15px;color:fuchsia;"></i>&nbsp;Email Id</label>
+            <input type="text" class="form-control" id="email"  value="{{emp.emailId}}" required [(ngModel)]="payment.emailId" name="email"  >
+          </div>
+          
+          <div class="form-group">
+            <label for="name" ><i class="fa fa-phone" style="font-size:15px;color:blue;"></i>&nbsp;Phone Number</label>
+            <input type="text" class="form-control" id="phoneno" minlength="10" maxlength="11"  value="{{emp.phone}}" required [(ngModel)]="payment.phone" name="cardno"  >
+          </div>
+          <div class="form-group">
+            <label for="name"><i class="fa fa-star" style="font-size:10px;color:darkorange;"></i>&nbsp;Service</label>
+            <input type="text" class="form-control" id="service"  required pattern= "[0-9]+"  value="{{postpaid.service}}" required [(ngModel)]="payment.service" name="cvv"  >
+          </div>
+          <div class="form-group">
+            <label for="name"><i class=" fa fa-inr " style="font-size:15px;color:blueviolet;"></i>&nbsp;Cost</label>
+            <input type="text" class="form-control" id="expyear" required pattern= "[0-9]+" value="{{postpaid.cost}}" required [(ngModel)]="payment.cost" name="expyear"  >
+          </div>
+          <div class="form-group">
+            <label for="name"><i class=" fa fa-calendar " style="font-size:15px;color:springgreen;"></i>&nbsp;Validity</label>
+            <input type="text" class="form-control" id="validity"  required pattern= "[0-9]+"  value="{{postpaid.validity}}" required [(ngModel)]="payment.validity" name="cvv"  >
+          </div>
+          <div class="form-group">
+            <label for="name">&nbsp;Benefits</label>
+            <input type="text" class="form-control" id="expmonth" required value="{{postpaid.benifits}}" [(ngModel)]="payment.benifits" name="expmonth"  >
+          </div>
+      
+          <div class="form-group">
+            <label for="name"><i class=" glyphicon glyphicon-credit-card" style="font-size:15px;color:blue;"></i>&nbsp;Card No</label>
+            <input type="text" class="form-control" id="cardno"  required pattern= "[0-9]+"maxlength="16" minlength="13" name="cvv" placeholder="Enter cardNo" >
+          </div>
+          <div class="form-group">
+            <label for="name"><i class=" fa fa-calendar " style="font-size:13px;color:orangered;"></i>&nbsp;Expiry</label>
+            <input type="text" class="form-control"  id="exp"  name="cvv" placeholder="expiry " >
+          </div>
+          <div class="form-group">
+            <label for="name"><i class="fa fa-lock" style="font-size:18px;color:darkorange;"></i>&nbsp;CVV</label>
+            <input type="password" class="form-control" required pattern= "[0-9]+" maxlength="3" minlength="3" id="cvv"   name="cvv" placeholder="CVV" >
+          </div>       
+         
+          <!-- <label><i class=" fa fa-phone"></i> ENTER NUMBER</label> -->
+          <button class="btn btn-success" style="font-size: medium;" [disabled]="payform.form.invalid" >Pay Now</button>
+          <!-- <input type="submit" value="Pay now" class="btn"> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
+        
+ 

@@ -1,0 +1,198 @@
+<ngx-spinner
+  bdColor="white">
+  <img src='assets\images\usergif2.gif' height="300px"/> 
+</ngx-spinner>
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <button type="button" class="btn btn-dark btn-lg" (click)="gotoprofile()">Profile</button>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">VIEW PLANS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-1">
+        <button type="button" class="btn btn-link btn-md" style="color: black;" (click)="gotopre()">Prepaid</button><br>
+        <button type="button" class="btn btn-link btn-md" style="color: black;" (click)="gotopost()">Postpaid</button><br>
+        <button type="button" class="btn btn-link btn-md" style="color: black; " (click)="gotodongle()">Dongle</button>
+      </div>
+    </div>
+    <button type="button" class="btn btn-dark btn-lg" (click)="gotooffers()">Offers</button>
+    <button type="button" class="btn btn-dark btn-lg" (click)="gototransaction()">Transaction</button>
+    <button type="button" class="btn btn-dark btn-lg" (click)="gotofaq()">FAQ</button>
+    <button type="button" class="btn btn-dark btn-lg" (click)="gotochat()">Chat</button>
+    
+    <button type="button" class="btn btn-dark btn-lg" (click)="gotologout()">Logout</button>
+
+    
+    
+  </div>
+</div>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">VOIZFONICA</h2>
+    <p class="w3-opacity"><i></i></p>
+    <h3>VoizFonica is a Mobile Network Operator and telephone company established in 2010, provides network access and telecommunication services that help people and companies communicate in an easy, efficient and environmentally friendly way.
+
+      VoizFonica business is very technology dependent as company acts as a network service provider (NSP)  in mobile.</h3>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Best Offers</p>
+        <img src="assets\images\offers.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Exclusive offers</p>
+        <img src="assets\images\offers22.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Exciting offers</p>
+        <img src="assets\images\offer3.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">RECHARGE OR PAY BILL FOR UR FAMILY!</h2>
+      <p class="w3-opacity w3-center"><i>HURRY UP!!!</i></p><br>
+
+     
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets\images\prepaid1.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Prepaid</b></p>
+            <p class="w3-opacity">Combo</p>
+            <p>Unlimited<br>3GB/day<br>84 days<br>Rs.699</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets\images\postpaid1.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Postpaid</b></p>
+            <p class="w3-opacity">Combo</p>
+            <p>Unlimited<br>90GB<br>28 days<br>Rs.405</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets\images\dongle2.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Dongle</b></p>
+            <p class="w3-opacity">High Speed Internet</p>
+            <p>3 months<br>1.5GB/day<br>Rs.2000</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-credit-card"></i>RECHARGE</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class=" fa fa-phone"></i> ENTER NUMBER</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter Number">
+        <p><label><i class="fa fa-money"></i> AMOUNT</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter Amount">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY<i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-40" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT INFO.</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i><h6>ADDRESS</h6>
+                              
+        <h3>6950 S.Jordan Road</h3>
+        <h3>Hyderabad-608112</h3><br> <br>
+        <i class="fa fa-phone" style="width:30px"></i><h3>Our services are available 24x7.</h3>
+        <h3>Feel free to contact</h3>
+        
+      
+      
+       <h4>1800 258 44 55</h4><br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email:Info@Voizfonica.com<br>
+      </div>
+      
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity w3-light-grey ">
+ 
+  <h3>copyrights @ Voizfonica</h3>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

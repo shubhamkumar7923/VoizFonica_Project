@@ -1,0 +1,31 @@
+<!-- <app-loginsuccess></app-loginsuccess> -->
+<div class="body">
+<div class="container">
+  <h2 style="text-align:center;color: darkmagenta;">
+      Update Prepaid
+    </h2>
+    <form (ngSubmit)="updatePrepaid()">
+        <div class="form-group">
+          <label for="name">Service</label>
+          <input type="text" class="form-control" id="service" required [(ngModel)]="prepaid.service" name="service">
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Cost</label>
+          <input type="text" class="form-control" id="cost" required [(ngModel)]="prepaid.cost" name="cost">
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Validity</label>
+          <input type="text" class="form-control" id="validity" required [(ngModel)]="prepaid.validity" name="validity">
+        </div>
+        <div class="form-group">
+          <label for="name">Benefits</label>
+          <input type="text" class="form-control" id="benifits" required [(ngModel)]="prepaid.benifits" name="benifits">
+        </div>
+        
+    
+        <button class="btn btn-success" style="font-size: medium;">Update</button>
+      </form>
+  </div>
+  </div>

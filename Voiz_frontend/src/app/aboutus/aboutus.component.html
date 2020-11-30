@@ -1,0 +1,166 @@
+<!-- <app-loginsuccess></app-loginsuccess> -->
+<ngx-spinner
+  bdColor="white">
+  <img src='assets\images\red.gif' height="300px"/> 
+</ngx-spinner>
+<div class="loginnav"  >
+   
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info text-light">
+    <a class="navbar-brand mr-5"   routerLink="/voizfonica" routerLinkActive="active" style="font-size:x-large;">VoizFonica</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <div class="collapse navbar-collapse"   id="navbarSupportedContent" style="padding-left: 500px;">
+      
+      <ul class="navbar-nav mr-auto" style="text-align:right;">
+       
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/add" routerLinkActive="active" >Add User</a>
+          </li>
+         
+           
+           
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/employees" routerLinkActive="active">All User</a>
+            </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aboutus">Aboutus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/addplans" routerLinkActive="active">Plans</a>
+        </li>
+       
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/chat" routerLinkActive="active">Chat</a>
+        </li >
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/logout" routerLinkActive="active">Logout</a>
+        </li >
+
+        <li class="nav-item">
+          <!-- <a class="nav-link" routerLink="/adminprofile" routerLinkActive="active">Profile</a> -->
+        <button type="button" class="btn btn-info btn-lg" (click)="gotoprofile()">Profile </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color:white;" >{{user.fname}}</a>
+        </li >
+        <!-- <li class="nav-item" >
+        <h2 class="mt-4" style="color:white;font-size: medium;">{{fname}} </h2>
+        </li> -->
+      </ul>
+    </div>
+
+  </nav>
+</div>
+
+  <!DOCTYPE html>
+  <html>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  
+  body, html {
+    height: 100%;
+    line-height: 1.8;
+    /* background-image: url(src\assets\images\bridge.jpg) repeat; */
+    /* background-color:lightpink; */
+  }
+  
+  /* Full height image header */
+  .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+  }
+  
+  .w3-bar .w3-button {
+    padding: 16px;
+  }
+  /* .about{
+    background: url(src\assets\images\bridge.jpg) no-repeat;
+
+  } */
+  </style>
+  <body>
+  
+  <!-- Navbar (sit on top) -->
+  
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+ 
+  
+  <!-- Header with full-height image -->
+ 
+  
+  <!-- About Section -->
+  <!-- <div class="about"> -->
+  <div class="w3-container" style="padding:128px 16px" id="about">
+    <h1 class="w3-center" >ABOUT THE COMPANY</h1>
+    <p class="w3-center w3-large">Key features of our company</p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px;">
+      <div class="w3-quarter">
+        <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large"><b>SECURITY</b></p>
+        <h3>"Happiness has many roots,<br>but none more important than security"</h3>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large"><b>PASSION</b></p>
+        <h3>"We don't communicate at a distance,<br>but we communicate with hearts"</h3>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large"><b>MISSION</b></p>
+        <h3>To shape the future of India by providing end-to-end digital solutions for businesses</h3>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large"><b>SUPPORT</b></p>
+        <h3>We provide 24x7 customer support<br>Resolve queries to build Customer relation.</h3>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  
+  
+   
+  <script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  
+  
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  </body>
+  </html>

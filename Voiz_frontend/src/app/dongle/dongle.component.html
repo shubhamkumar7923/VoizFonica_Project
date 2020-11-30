@@ -1,0 +1,41 @@
+<!-- <app-loginsuccess></app-loginsuccess> -->
+<div class="body">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Dongle List</h2>
+    </div>
+    <div class="panel-body">
+      <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th >Service</th>
+            <th >Cost</th>
+            <th >Validity</th>
+            <th >Benefits</th>
+            
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dongle of dongles | async">
+            <td>{{dongle.id}}</td>
+            <td>{{dongle.service}}</td>
+            <td>{{dongle.cost}}</td>
+            <td>{{dongle.validity}}&nbsp;days</td>
+            <td>{{dongle.benifits}}</td>
+            
+            
+              <td><button style='margin-right:16px' (click)="deletedongle(dongle.id)" class="btn btn-danger" style="font-size: medium;">Delete</button>
+                <button style='margin-right:16px' (click)="updatedongle(dongle.id)" class="btn btn-success" style="margin-left: 10px;font-size: medium;">Edit details</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="but">
+    <button class="btn btn-info" style="font-size: 25px;" routerLink="/addplans" routerLinkActive="active" >BACK</button>
+  </div>
+  </div>

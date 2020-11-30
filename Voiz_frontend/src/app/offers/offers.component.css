@@ -1,0 +1,157 @@
+.m-t-b-5{
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+.mt-3{
+	margin-top: 1.5em;
+}
+.justifycenter{
+    justify-content: center;
+}
+
+.price_cards_col{
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+@media(max-width:410px){
+    .price_cards_col{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media(max-width:767px){
+    .price_cards_col{
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media(min-width:768px){
+    .price_cards_col{
+        padding-left: 10em;
+        padding-right: 10em;
+    }    
+}
+
+@media(min-width:992px){
+    .price_cards_col{
+        padding-left: 0em;
+        padding-right: 0em;
+    }  
+}
+
+@media(min-width:1200px){
+    .price_cards_col{
+        padding-left: 0em;
+        padding-right: 0em;
+    }  
+}
+
+
+.pricing_cards{
+    height: 550px;
+    border: 2px solid #6bb5b7;
+    border-radius: 8px;
+}
+
+.pricing_header{
+	padding: 1.4em;
+    background-color: #6bb5b7;
+    text-align: center;
+    color: #fff;
+    border-bottom: 3px solid #4a6c6d;
+    position: relative;
+    overflow: hidden;
+}
+
+.popularcard{
+    margin-top: -10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 8px;
+    height: 570px;
+    border-bottom: 0;
+}
+
+.pricing_header h2, .pricing_header h3{
+	margin: 0;
+    letter-spacing: 1px;
+    margin-bottom: 0.5em;
+    color: whitesmoke;
+}
+
+
+.pricing_body ul li{
+	margin-bottom: 1.25em;
+    color: #6bb5b7;
+    font-size: 18px;
+}
+
+.pricing_body{
+	height: 280px;
+}
+
+.pricing_body ul {
+    list-style-image: none;
+    list-style: none;
+    padding: 0px 0px 0px 10px;
+    margin-top: 50px;
+    list-style: outside none none;
+}
+
+.pricing_body ul li:before{
+	content:'\2713';
+    line-height: 1;
+    font-weight: bolder;
+    margin-right: 1em;
+}
+
+.pricing_footer{
+	border-top: 1px solid #4a6c6d;
+    text-align: center;
+}
+
+
+.buy-btn{
+	margin-top: 2em;
+    color: #fff;
+    background-color: #6bb5b7;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    border-radius: 30px;
+    border:1px solid #6bb5b7;
+    box-shadow: 0px 5px 12px 2px rgb(192, 192, 197);
+    transition: all 0.3s linear;
+}
+
+.buy-btn:hover, .buy-btn:focus{
+	 background-color: #fff;
+	 border:1px solid #6bb5b7;
+	 color: #6bb5b7;
+
+}
+
+.popular-tag{
+	position: absolute;
+    top: 18px;
+    right: -20px;
+    transform: rotate(45deg);
+    background: white;
+    color: #6bb5b7;
+    width: 100px;
+}
+
+.popularcard{
+    background-color: #6bb5b7;
+}
+
+.popularcard .pricing_body ul li{
+    color: #fff;
+}
+
+.popularcard .buy-btn{
+    box-shadow: 0px 5px 12px 2px rgb(41, 91, 93);
+}

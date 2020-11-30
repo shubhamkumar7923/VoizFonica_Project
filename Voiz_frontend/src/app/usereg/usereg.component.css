@@ -1,0 +1,25 @@
+.container{
+    position: relative;
+    margin-top: 5px;
+    width: 450px;
+    height: 700px;
+    background:whitesmoke;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.body{
+    background: url(src\assets\images\regbg.jpg) no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* position: fixed;  */
+    top: 0; 
+    left: 0; 
+  
+    /* Preserve aspet ratio */
+    min-width: 100%;
+   
+    min-height: 100%;
+
+}

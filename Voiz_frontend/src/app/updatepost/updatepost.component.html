@@ -1,0 +1,32 @@
+<!-- <app-loginsuccess></app-loginsuccess> -->
+<div class="body">
+    <div class="container">
+      <h2 style="text-align:center;color: darkmagenta;">
+          Update Postpaid
+        </h2>
+        <form (ngSubmit)="updatePostpaid()">
+            <div class="form-group">
+              <label for="name">Service</label>
+              <input type="text" class="form-control" id="service" required [(ngModel)]="postpaid.service" name="service">
+            </div>
+        
+            <div class="form-group">
+              <label for="name">Cost</label>
+              <input type="text" class="form-control" id="cost" required [(ngModel)]="postpaid.cost" name="cost">
+            </div>
+        
+            <div class="form-group">
+              <label for="name">Validity</label>
+              <input type="text" class="form-control" id="validity" required [(ngModel)]="postpaid.validity" name="validity">
+            </div>
+            <div class="form-group">
+              <label for="name">Benefits</label>
+              <input type="text" class="form-control" id="benifits" required [(ngModel)]="postpaid.benifits" name="benifits">
+            </div>
+            
+        
+            <button class="btn btn-success" style="font-size: medium;">Update</button>
+          </form>
+      </div>
+      </div>
+    

@@ -1,0 +1,34 @@
+<div class="project">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-info text-light">
+    <a class="navbar-brand mr-5" routerLink="voizfonica">VoizFonica</a>
+</nav>
+</div>
+
+<div class="body">
+
+<div class="container">
+    <h2 style="text-align: center; color:darkmagenta;">Login Form</h2>
+    <br>
+    <form #loginform="ngForm" (ngSubmit)="loginUser(user.emailId)">
+      <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control"  id="email" placeholder="Enter email" name="email" [(ngModel)]="user.emailId" required>
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" [(ngModel)]="user.password" required>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> Remember me</label>
+      </div>
+      
+      <button type="submit" class="btn btn-success" style="font-size:medium ;"[disabled]="loginform.form.invalid">Login</button>
+     
+      &nbsp; &nbsp;<a [routerLink]="['/forgotadmin']"> Forgot Password</a><br>
+      <a [routerLink]="['/reg']"> New User ? Register here</a>
+    </form>
+    <!-- <small class="float-right" [routerLink]="['/reg']"> New User ? Register here</small> -->
+  </div>
+  </div>
+  

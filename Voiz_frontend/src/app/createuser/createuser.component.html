@@ -1,0 +1,50 @@
+<app-loginsuccess></app-loginsuccess>
+<div class="body">
+<div class="container">
+  <h2 style="text-align:center;color: darkmagenta;">Create User</h2>
+  <div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Email Id</label>
+        <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.emailId" name="emailId">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Phone number</label>
+        <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" name="phone">
+      </div>
+      <div class="form-group">
+        <label for="name">Age</label>
+        <input type="number" class="form-control" id="age" required [(ngModel)]="employee.age" name="age">
+      </div>
+      <div class="form-group">
+        <label for="name">Aadhar</label>
+        <input type="text" class="form-control" id="adhar" required pattern= "[0-9]+" required [(ngModel)]="employee.adhar" maxlength="12" minlength="12" name="adhar" >
+      </div>
+      <div class="form-group">
+        <label for="name">City</label>
+        <input type="text" class="form-control" id="city" required [(ngModel)]="employee.city" name="city">
+      </div>
+      <div class="form-group">
+        <label for="name">Address</label>
+        <input typearea="text" class="form-control" id="address" required [(ngModel)]="employee.address" name="address">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd"  name="pwd" [(ngModel)]="employee.password" required>
+      </div>
+      <div class="form-group">
+        <label for="pwdc">Confirm Password:</label>
+        <input type="password" class="form-control" id="cpwd"  name="cpwd" [(ngModel)]="employee.password">
+      </div>
+  
+      <button class="btn btn-success" style="font-size: medium;">Submit</button>
+    </form>
+  </div>
+  </div>
+  </div>

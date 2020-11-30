@@ -1,0 +1,42 @@
+<!-- <app-loginsuccess></app-loginsuccess> -->
+<div class="body">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Prepaid List</h2>
+      </div>
+      <div class="panel-body">
+        <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+  
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th >Service</th>
+              <th >Cost</th>
+              <th >Validity</th>
+              <th >Benefits</th>
+              
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let prepaid of prepaids | async">
+              <td>{{prepaid.id}}</td>
+              <td>{{prepaid.service}}</td>
+              <td>{{prepaid.cost}}</td>
+              <td>{{prepaid.validity}}&nbsp;days</td>
+              <td>{{prepaid.benifits}}</td>
+              
+              
+                <td>
+                    <!-- <button style='margin-right:16px' (click)="deletepre(prepaid.id)" class="btn btn-danger" style="font-size: medium;">Delete</button>  -->
+                    <button style='margin-right:16px' (click)="gotopayment(prepaid.id)" class="btn btn-success" style="margin-left: 10px;font-size: medium;">BUY</button>
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="but">
+      <button class="btn btn-info" style="font-size: 25px;"  (click)="goback()" routerLinkActive="active" >BACK</button>
+    </div>
+    </div>

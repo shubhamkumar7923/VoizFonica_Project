@@ -1,0 +1,12 @@
+.body{
+    background: url(src\assets\images\bridge.jpg) no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center; 
+    position: fixed; 
+   
+    min-width: 100%;
+    min-height: 100%;
+    font-size: medium;
+
+}

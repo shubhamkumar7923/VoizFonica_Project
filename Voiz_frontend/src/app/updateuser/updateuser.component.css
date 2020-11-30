@@ -1,0 +1,19 @@
+.container{
+    position: relative;
+    margin-top: 50px;
+    width: 450px;
+    height: 700px;
+    background:whitesmoke;
+    border-radius: 5px;
+    font-size: medium;
+}
+.body{
+    background: url(src\assets\images\bridge.jpg) no-repeat;
+    background-size: cover;
+    align-items: center;
+    justify-content: center; 
+    position: fixed; 
+    
+    min-width: 100%;
+    min-height: 100%;
+}

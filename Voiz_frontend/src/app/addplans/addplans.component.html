@@ -1,0 +1,135 @@
+<app-loginsuccess></app-loginsuccess>
+
+<div class="body">
+    <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Prepaid</h2>
+              <p class="card-text">This is the form to add prepaid plans to the customers</p>
+              <!-- <a href="#" class="btn btn-primary">ADD</a> -->
+            </div>
+            <div class="container">
+               
+                <div [hidden]="submitted" style="width: 400px;">
+                    <form (ngSubmit)="onPrepaid()">
+                        <div class="form-group">
+                          <label for="name">Service</label>
+                          <input type="text" class="form-control" id="service" required [(ngModel)]="prepaid.service" name="service">
+                        </div>
+                    
+                        <div class="form-group">
+                          <label for="name">Cost</label>
+                          <input type="text" class="form-control" id="cost" required [(ngModel)]="prepaid.cost" name="cost">
+                        </div>
+                    
+                        <div class="form-group">
+                          <label for="name">Validity</label>
+                          <input type="text" class="form-control" id="validity" required [(ngModel)]="prepaid.validity" name="validity">
+                        </div>
+                        <div class="form-group">
+                          <label for="name">Benefits</label>
+                          <input type="text" class="form-control" id="benifits" required [(ngModel)]="prepaid.benifits" name="benifits">
+                        </div>
+                        
+                    
+                        <button class="btn btn-success" style="font-size: medium;">Add</button>&nbsp;&nbsp;
+                        <button class="btn btn-warning" [routerLink]="['/prepaid']" style="font-size: medium;">View Prepaid</button>
+
+                      </form>
+                </div>
+                </div>
+                <!-- <button class="btn btn-warning" [routerLink]="['/prepaid']" style="font-size: medium;">View</button> -->
+    
+          </div>
+        </div>
+    
+        <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Postpaid</h2>
+                <p class="card-text">This is the form to add postpaid plans to the customers</p>
+                <!-- <a href="#" class="btn btn-primary">ADD</a> -->
+              </div>
+              <div class="container">
+                 
+                  <div [hidden]="submitted" style="width: 400px;">
+                    <form (ngSubmit)="onPostpaid()">
+                        <div class="form-group">
+                            <label for="name">Service</label>
+                            <input type="text" class="form-control" id="service" required [(ngModel)]="postpaid.service" name="service">
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="name">Cost</label>
+                            <input type="text" class="form-control" id="cost" required [(ngModel)]="postpaid.cost" name="cost">
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="name">Validity</label>
+                            <input type="text" class="form-control" id="validity" required [(ngModel)]="postpaid.validity" name="validity">
+                          </div>
+                          <div class="form-group">
+                            <label for="name">Benefits</label>
+                            <input type="text" class="form-control" id="benifits" required [(ngModel)]="postpaid.benifits" name="benifits">
+                          </div>
+                      
+                  
+                      <button class="btn btn-success" style="font-size: medium;">Add</button>&nbsp;&nbsp;
+                      <button class="btn btn-warning" [routerLink]="['/postpaid']" style="font-size: medium;">View Postpaid</button>
+                    </form>
+                  </div>
+                  </div>
+      
+            </div>
+          </div>
+    
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Dongle</h2>
+                <p class="card-text">This is the form to add dongle plans to the customers</p>
+                <!-- <a href="#" class="btn btn-primary">ADD</a> -->
+              </div>
+              <div class="container">
+                 
+                  <div [hidden]="submitted" style="width: 400px;">
+                    <form (ngSubmit)="onDongle()">
+                        <div class="form-group">
+                            <label for="name">Service</label>
+                            <input type="text" class="form-control" id="service" required [(ngModel)]="dongle.service" name="service">
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="name">Cost</label>
+                            <input type="text" class="form-control" id="cost" required [(ngModel)]="dongle.cost" name="cost">
+                          </div>
+                      
+                          <div class="form-group">
+                            <label for="name">Validity</label>
+                            <input type="text" class="form-control" id="validity" required [(ngModel)]="dongle.validity" name="validity">
+                          </div>
+                          <div class="form-group">
+                            <label for="name">Benefits</label>
+                            <input type="text" class="form-control" id="benifits" required [(ngModel)]="dongle.benifits" name="benifits">
+                          </div>
+                        
+                    
+                        <button class="btn btn-success" style="font-size: medium;">Add</button>&nbsp;&nbsp;
+                        <button class="btn btn-warning" [routerLink]="['/dongle']" style="font-size: medium;">View Dongle</button>
+                      </form>
+                  </div>
+                  </div>
+      
+            </div>
+          </div>
+        
+        
+        
+      </div>
+    
+    
+   
+
+</div>
+

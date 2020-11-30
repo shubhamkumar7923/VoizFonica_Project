@@ -1,0 +1,34 @@
+<!-- <app-loginsuccess></app-loginsuccess> -->
+<div class="body">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Recharge History</h2>
+      </div>
+      <div class="panel-body">
+        <table id="example" class="table table-danger table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+  
+          <thead>
+            <tr>
+              <th>Mobile No</th>
+              <th >Service</th>
+              <th >Cost</th>
+              <th >Validity</th>
+              <th >Benefits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let payment of payments | async">
+              <td>{{payment.phone}}</td>
+              <td>{{payment.service}}</td>
+              <td>{{payment.cost}}</td>
+              <td>{{payment.validity}}&nbsp;days</td>
+              <td>{{payment.benifits}}</td>           
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="but">
+      <button class="btn btn-info" style="font-size: 25px;"  (click)="goback()" routerLinkActive="active" >BACK</button>
+    </div>
+    </div>

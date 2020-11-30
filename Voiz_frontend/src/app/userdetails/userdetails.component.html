@@ -1,0 +1,42 @@
+<app-loginsuccess></app-loginsuccess>
+<div class="body">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Users List</h2>
+    </div>
+    <div class="panel-body">
+      <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+
+        <thead>
+          <tr>
+            <th>User Id</th>
+            <th >Name</th>
+            <th >Email</th>
+            <th >Age</th>
+            <th >Phone</th>
+            <th >Aadhar</th>
+            <th >City</th>
+            <th >Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees | async">
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.emailId}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.phone}}</td>
+            <td>{{employee.adhar}}</td>
+            <td>{{employee.city}}</td>
+            <td>{{employee.address}}</td>
+            
+              <td><button style='margin-right:16px' (click)="deleteEmployee(employee.id)" class="btn btn-danger" style="font-size: small;">Delete</button>
+                <button style='margin-right:16px' (click)="updateEmployee(employee.id)" class="btn btn-success" style="margin-left: 10px;font-size: small;">Edit details</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </div>
