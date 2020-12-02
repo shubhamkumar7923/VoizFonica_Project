@@ -1,8 +1,4 @@
-<div class="project">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-info text-light">
-    <a class="navbar-brand mr-5" routerLink="voizfonica">VoizFonica</a>
-</nav>
-</div>
+
 <div class="body">
 <div class="container">
   <h2 style="text-align: center; color: crimson;">Registration Form</h2>
@@ -10,23 +6,23 @@
   <small class="text-danger">{{msg}}</small>
   <div class="form-group">
     <label for="name">First Name:</label>
-    <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" [(ngModel)]="user.fname" required>
+    <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required pattern= "[A-Za-z]+" minlength="3"  [(ngModel)]="user.fname" required>
   </div>
   <div class="form-group">
     <label for="name">Last Name:</label>
-    <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" [(ngModel)]="user.lname" required>
+    <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" required pattern= "[A-Za-z]+" minlength="1"  [(ngModel)]="user.lname" required>
   </div>
   <div class="form-group">
     <label for="name">Age:</label>
-    <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age" [(ngModel)]="user.age" required>
+    <input type="number" class="form-control" id="age" placeholder="Enter Age" name="age"   min="18" max="99"  [(ngModel)]="user.age" required>
   </div>
   <div class="form-group">
     <label for="email">Email:</label>
-    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="user.emailId" required>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required pattern="^[a-zA-Z]+[.&$#_0-9a-z]*?[a-z0-9]+@(gmail|yahoo|outlook|ac)\.(com|in|org)$" [(ngModel)]="user.emailId" required>
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" [(ngModel)]="user.password" required>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" minlength="5" maxlength="10"  required pattern= "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" [(ngModel)]="user.password" required>
   </div>
   <div class="form-group">
     <label for="pwdc">Confirm Password:</label>

@@ -29,11 +29,11 @@
           
           <div class="form-group">
             <label for="name" ><i class="fa fa-phone" style="font-size:15px;color:blue;"></i>&nbsp;Phone Number</label>
-            <input type="text" class="form-control" id="phoneno" minlength="10" maxlength="11"  value="{{emp.phone}}" required [(ngModel)]="payment.phone" name="cardno"  >
+            <input type="text" class="form-control" id="phoneno" minlength="9" maxlength="15"  value="{{emp.phone}}" required [(ngModel)]="payment.phone" name="cardno"  >
           </div>
           <div class="form-group">
             <label for="name"><i class="fa fa-star" style="font-size:10px;color:darkorange;"></i>&nbsp;Service</label>
-            <input type="text" class="form-control" id="service"  required pattern= "[0-9]+"  value="{{dongle.service}}" required [(ngModel)]="payment.service" name="cvv"  >
+            <input type="text" class="form-control" id="service"   value="{{dongle.service}}" required [(ngModel)]="payment.service" name="cvv"  >
           </div>
           <div class="form-group">
             <label for="name"><i class=" fa fa-inr " style="font-size:15px;color:blueviolet;"></i>&nbsp;Cost</label>
@@ -41,7 +41,7 @@
           </div>
           <div class="form-group">
             <label for="name"><i class=" fa fa-calendar " style="font-size:15px;color:springgreen;"></i>&nbsp;Validity</label>
-            <input type="text" class="form-control" id="validity"  required pattern= "[0-9]+"  value="{{dongle.validity}}" required [(ngModel)]="payment.validity" name="cvv"  >
+            <input type="text" class="form-control" id="validity"  required pattern= "[0-9]+"  value="{{dongle.validity}}" required [(ngModel)]="payment.validity" name="validity"  >
           </div>
           <div class="form-group">
             <label for="name">&nbsp;Benefits</label>
@@ -50,17 +50,16 @@
       
           <div class="form-group">
             <label for="name"><i class=" glyphicon glyphicon-credit-card" style="font-size:15px;color:blue;"></i>&nbsp;Card No</label>
-            <input type="text" class="form-control" id="cardno"  required pattern= "[0-9]+"maxlength="16" minlength="13" name="cvv" placeholder="Enter cardNo" >
+            <input type="text" class="form-control" id="cardno"  required pattern= "[0-9]+" maxlength="16" minlength="13" name="card" placeholder="Enter cardNo" required [(ngModel)]="payment.cardno">
           </div>
           <div class="form-group">
             <label for="name"><i class=" fa fa-calendar " style="font-size:13px;color:orangered;"></i>&nbsp;Expiry</label>
-            <input type="text" class="form-control"  id="exp"  name="cvv" placeholder="expiry " >
+            <input type="text" class="form-control"  id="exp"  name="expiry" placeholder="expiry " required [(ngModel)]="payment.expiry" >
           </div>
           <div class="form-group">
             <label for="name"><i class="fa fa-lock" style="font-size:18px;color:darkorange;"></i>&nbsp;CVV</label>
-            <input type="password" class="form-control" required pattern= "[0-9]+" maxlength="3" minlength="3" id="cvv"   name="cvv" placeholder="CVV" >
-          </div>       
-         
+            <input type="password" class="form-control"  required pattern= "[0-9]+" maxlength="3" minlength="3" id="cvv"   name="cvv" placeholder="CVV" required [(ngModel)]="payment.cvv" >
+          </div>           
           <!-- <label><i class=" fa fa-phone"></i> ENTER NUMBER</label> -->
           <button class="btn btn-success" style="font-size: medium;" [disabled]="payform.form.invalid" >Pay Now</button>
           <!-- <input type="submit" value="Pay now" class="btn"> -->

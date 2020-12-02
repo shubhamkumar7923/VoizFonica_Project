@@ -4,38 +4,38 @@
   <h2 style="text-align:center;color: darkmagenta;">
       Update User
     </h2>
-      <form (ngSubmit)="onSubmit()">
+      <form #regform="ngForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" [(ngModel)]="employee.name" name="name">
+      <input type="text" class="form-control" id="name" required pattern= "[A-Za-z]+" minlength="3" [(ngModel)]="employee.name" name="name">
     
     </div>
     <div class="form-group">
       <label for="name">Email</label>
-      <input type="text" class="form-control" id="emailId" [(ngModel)]="employee.emailId" name="emailId">
+      <input type="email" class="form-control" id="emailId" required pattern="^[a-zA-Z]+[.&$#_0-9a-z]*?[a-z0-9]+@(gmail|yahoo|outlook|ac)\.(com|in|org)$" [(ngModel)]="employee.emailId" name="emailId">
     
     </div>
     <div class="form-group">
       <label for="name">Phone number</label>
-      <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" name="phone">
+      <input type="text" class="form-control" id="phone" required pattern ="[6-9]{1}[0-9]{8,14}" maxlength="15" minlength="9" required [(ngModel)]="employee.phone" name="phone">
     </div>
     <div class="form-group">
       <label for="name">Aadhar</label>
-      <input type="text" class="form-control" id="adhar"  required [(ngModel)]="employee.adhar" maxlength="12" minlength="12" name="adhar" >
+      <input type="text" class="form-control" id="adhar" required pattern= "[0-9]+" required [(ngModel)]="employee.adhar" maxlength="12" minlength="12" name="adhar" >
     </div>
     <div class="form-group">
       <label for="name">Age</label>
-      <input type="number" class="form-control" id="age" required [(ngModel)]="employee.age" name="age">
+      <input type="number" class="form-control" id="age" min="18" max="99" required [(ngModel)]="employee.age" name="age">
     </div>
     <div class="form-group">
       <label for="name">City</label>
-      <input type="text" class="form-control" id="city" required [(ngModel)]="employee.city" name="city">
+      <input type="text" class="form-control" id="city" minlength="3" required pattern= "[A-Za-z]+" required [(ngModel)]="employee.city" name="city">
     </div>
     <div class="form-group">
       <label for="name">Address</label>
-      <input typearea="text" class="form-control" id="address" required [(ngModel)]="employee.address" name="address">
+      <input typearea="text" class="form-control" id="address" minlength="3" required [(ngModel)]="employee.address" name="address">
     </div>
-    <button style='margin-right:16px' class="btn btn-success" style="font-size: medium;">Submit</button>&nbsp;
+    <button style='margin-right:16px' class="btn btn-success" style="font-size: medium;" [disabled]="regform.form.invalid">Submit</button>&nbsp;
     <button style='margin-right:16px' (click)="list()" class="btn btn-success" style="font-size: medium;">Back to Users</button>
     
     </form>

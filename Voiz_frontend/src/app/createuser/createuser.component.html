@@ -3,47 +3,47 @@
 <div class="container">
   <h2 style="text-align:center;color: darkmagenta;">Create User</h2>
   <div [hidden]="submitted" style="width: 400px;">
-    <form (ngSubmit)="onSubmit()">
+    <form #regform="ngForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="employee.name" name="name">
+        <input type="text" class="form-control" id="name" required pattern= "[A-Za-z]+" minlength="3" required [(ngModel)]="employee.name" name="name" >
       </div>
   
-      <div class="form-group">
+      <div class="form-group" >
         <label for="name">Email Id</label>
-        <input type="text" class="form-control" id="emailId" required [(ngModel)]="employee.emailId" name="emailId">
+        <input type="email" class="form-control" id="email" required pattern="^[a-zA-Z]+[.&$#_0-9a-z]*?[a-z0-9]+@(gmail|yahoo|outlook|ac)\.(com|in|org)$" required [(ngModel)]="employee.emailId" name="email" >
       </div>
   
       <div class="form-group">
         <label for="name">Phone number</label>
-        <input type="text" class="form-control" id="phone" required [(ngModel)]="employee.phone" name="phone">
+        <input type="text" class="form-control" id="phone" required pattern ="[6-9]{1}[0-9]{8,14}" maxlength="15" minlength="9"  required [(ngModel)]="employee.phone" name="phone" >
       </div>
       <div class="form-group">
         <label for="name">Age</label>
-        <input type="number" class="form-control" id="age" required [(ngModel)]="employee.age" name="age">
-      </div>
-      <div class="form-group">
-        <label for="name">Aadhar</label>
-        <input type="text" class="form-control" id="adhar" required pattern= "[0-9]+" required [(ngModel)]="employee.adhar" maxlength="12" minlength="12" name="adhar" >
+        <input type="number" class="form-control" id="age" min="18" max="99"  required [(ngModel)]="employee.age" name="age" >
       </div>
       <div class="form-group">
         <label for="name">City</label>
-        <input type="text" class="form-control" id="city" required [(ngModel)]="employee.city" name="city">
+        <input type="text" class="form-control" id="city" minlength="3" required pattern= "[A-Za-z]+" required [(ngModel)]="employee.city" name="city" >
       </div>
       <div class="form-group">
         <label for="name">Address</label>
-        <input typearea="text" class="form-control" id="address" required [(ngModel)]="employee.address" name="address">
+        <input type="text" class="form-control" id="address" minlength="3" required [(ngModel)]="employee.address" name="address" >
       </div>
       <div class="form-group">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd"  name="pwd" [(ngModel)]="employee.password" required>
-      </div>
-      <div class="form-group">
-        <label for="pwdc">Confirm Password:</label>
-        <input type="password" class="form-control" id="cpwd"  name="cpwd" [(ngModel)]="employee.password">
-      </div>
+          <label for="name">Aadhar</label>
+          <input type="text" class="form-control" id="adhar" required pattern= "[0-9]+" required [(ngModel)]="employee.adhar" maxlength="12" minlength="12" name="adhar" >
+        </div>
+        <div class="form-group">
+          <label for="name">Password</label>
+          <input type="password" class="form-control" id="password" required pattern= "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"  minlength="5" maxlength="10" required [(ngModel)]="employee.password" name="password" >
+        </div>
+        <div class="form-group">
+          <label for="pwdc">Confirm Password:</label>
+          <input type="password" class="form-control" id="cpwd" name="cpwd" [(ngModel)]="employee.password">
+        </div>
   
-      <button class="btn btn-success" style="font-size: medium;">Submit</button>
+      <button class="btn btn-success" style="font-size: medium;" [disabled]="regform.form.invalid">Submit</button>
     </form>
   </div>
   </div>

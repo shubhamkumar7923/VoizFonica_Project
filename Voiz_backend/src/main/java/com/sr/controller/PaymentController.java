@@ -38,10 +38,11 @@ public class PaymentController {
 	 @CrossOrigin(origins = "http://localhost:4200")
 	    public Payment addPayment(@RequestBody Payment payment) throws Exception {
 		 Payment payObj = null;
+		    
 			smtpMailSender.send(payment.getEmailId(), "Voizfonica Payment successfull","Recharge Done Successfully !!!!");
 //			payObj = pr.saveUser(payment);
 //			return userObj;
-			smtpMailSender.sendMail(payment.getEmailId(), "Invoice", "Payment Recipt");
+			smtpMailSender.sendMail(payment);
 	        return pr.save(payment);
 	    }
 

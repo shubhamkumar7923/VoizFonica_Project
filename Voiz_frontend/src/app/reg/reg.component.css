@@ -1,6 +1,6 @@
 .container{
     position: relative;
-    margin-top: 50px;
+    margin-top: 5px;
     width: 450px;
     height: 500px;
     background:whitesmoke;
@@ -9,7 +9,7 @@
 }
 .body{
     background: url(src\assets\images\adminreg1.jpg) no-repeat;
-    background-size: cover;
+    background-size:cover;
     align-items: center;
     justify-content: center;
     display: flex;

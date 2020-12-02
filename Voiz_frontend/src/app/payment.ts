@@ -7,4 +7,7 @@ export class Payment {
     cost:number;
     validity:number;
     service:string;
+    cvv:number;
+    expiry:string;
+    cardno:string;
 }
