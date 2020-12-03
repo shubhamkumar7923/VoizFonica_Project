@@ -3,7 +3,7 @@
     background-size: cover;
     align-items: center;
     justify-content: center; 
-    position: fixed; 
+    /* position: fixed;  */
    
     min-width: 100%;
     min-height: 100%;
@@ -11,10 +11,11 @@
 
 .container{
     position: relative;
-    margin-top: 0px;
+    margin-top: 10px;
     width: 450px;
-    height: 950px;
+    height: 740px;
     background:whitesmoke;
     border-radius: 5px;
-    font-size: 11px;
+    font-size: 16px;
 }
+input { font-size: 15px; }

@@ -1,6 +1,6 @@
 <div class="body">
 <div class="container">
-    <h2 style="text-align: center;">Update Password</h2>
+    <h1 style="text-align: center;">Update Password</h1>
     <form #rudForm="ngForm" (ngSubmit)="upAdmin(user.emailId,user.password)">
      
       <div class="form-group">
@@ -12,9 +12,9 @@
         <input type="password" class="form-control" id="pwd" required pattern= "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"  minlength="5" maxlength="10"  required [(ngModel)]="user.password" placeholder="Enter password" name="pwd">
       </div>
     
-      <button type="submit" class="btn btn-success" style="font-size: medium;" [disabled]="rudForm.form.invalid">Update</button>&nbsp;&nbsp;
+      <button type="submit" class="btn btn-success" style="font-size: 20px;" [disabled]="rudForm.form.invalid">Update</button>&nbsp;&nbsp;
      
-       <button type="submit" class="btn btn-success" style="font-size: medium;"  (click)="goback()" routerLinkActive="active" >BACK</button>
+       <button type="submit" class="btn btn-info" style="font-size: 20px;"  (click)="goback()" routerLinkActive="active" >BACK</button>
     </form>
     <br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br>

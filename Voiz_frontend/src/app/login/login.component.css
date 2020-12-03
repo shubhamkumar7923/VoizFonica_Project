@@ -2,11 +2,11 @@
    
     position: relative;
     margin-top: 100px;
-    width: 450px;
-    height: 300px;
+    width: 500px;
+    height: 360px;
     background:whitesmoke;
     border-radius: 5px;
-    font-size: medium;
+    font-size: 20px;
     
 }
 .body{
@@ -24,6 +24,8 @@
     min-height: 100%;
 
 }
+input { font-size: 15px; }
+
 
 
 

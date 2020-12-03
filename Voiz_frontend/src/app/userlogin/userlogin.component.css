@@ -1,12 +1,12 @@
 .container{
     
     position: relative;
-    margin-top: 100px;
-    width: 500px;
-    height: 300px;
+    margin-top: 90px;
+    width: 520px;
+    height: 360px;
     background:whitesmoke;
     border-radius: 5px;
-    font-size: medium;
+    font-size: 20px;
     
 }
 .body{
@@ -24,6 +24,5 @@
     min-height: 100%;
 
 }
-
-
+input { font-size: 15px; }
 

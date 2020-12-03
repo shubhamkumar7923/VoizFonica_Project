@@ -1,7 +1,8 @@
 
 <div class="body">
 <div class="container">
-  <h2 style="text-align: center; color: crimson;">Registration Form</h2>
+  <h1 style="text-align: center; color: crimson;">Registration Form</h1>
+  <br>
 <form #regform="ngForm" (ngSubmit)="reguser()">
   <small class="text-danger">{{msg}}</small>
   <div class="form-group">
@@ -32,9 +33,9 @@
     <label><input type="checkbox" name="remember"> Terms and Conditions</label>
   </div>
 
-  <button type="submit" class="btn btn-success" style="font-size: medium;" [disabled]="regform.form.invalid">Register</button>
+  <button type="submit" class="btn btn-success" style="font-size: 20px;" [disabled]="regform.form.invalid">Register</button>
   <!-- <small class="float-right" [routerLink]="['/login']"> Existing  User ? Login here</small> -->
-  <a [routerLink]="['/Adminlogin']"> Existing  User ? Login here</a>
+  <a [routerLink]="['/Adminlogin']" style="font-size: 17px;"> Existing  User ? Login here</a>
  
 </form>
 </div>

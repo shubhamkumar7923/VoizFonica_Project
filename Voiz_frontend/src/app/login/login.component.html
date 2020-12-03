@@ -1,13 +1,8 @@
-<div class="project">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-info text-light">
-    <a class="navbar-brand mr-5" routerLink="voizfonica">VoizFonica</a>
-</nav>
-</div>
 
 <div class="body">
 
 <div class="container">
-    <h2 style="text-align: center; color:darkmagenta;">Login Form</h2>
+    <h1 style="text-align: center; color:darkmagenta;">Login Form</h1>
     <br>
     <form #loginform="ngForm" (ngSubmit)="loginUser(user.emailId)">
       <small class="text-danger">{{msg}}</small>
@@ -23,7 +18,7 @@
         <label><input type="checkbox" name="remember"> Remember me</label>
       </div>
       
-      <button type="submit" class="btn btn-success" style="font-size:medium ;"[disabled]="loginform.form.invalid">Login</button>
+      <button type="submit" class="btn btn-success" style="font-size:20px ;"[disabled]="loginform.form.invalid">Login</button>
      
       &nbsp; &nbsp;<a [routerLink]="['/forgotadmin']"> Forgot Password</a><br>
       <a [routerLink]="['/reg']"> New User ? Register here</a>

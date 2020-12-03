@@ -87,7 +87,7 @@
     position: relative;
     margin-top: 15px;
     width: 450px;
-    height: 900px;
+    height: 970px;
     background:whitesmoke;
     border-radius: 5px;
     font-size: 15px;
@@ -107,3 +107,5 @@
     min-width: 100%;
     min-height: 100%;
   }
+
+  input { font-size: 14px; }

@@ -1,7 +1,7 @@
 
   <div class="body">
     <div class="container">
-     <h3 style="color: darkviolet; text-align: center;"> <b> User Registration </b> </h3>
+     <h1 style="color: darkviolet; text-align: center;"> <b> User Registration </b> </h1>
       
           <form #regform="ngForm" (ngSubmit)="userreg()">
             <small class="text-danger">{{msg}}</small>
@@ -46,9 +46,8 @@
               <div class="checkbox">
                 <label><input type="checkbox" name="remember" > Terms and Conditions</label>
               </div>
-        
-            <button  class="btn btn-success" style="font-size: small; " [disabled]="regform.form.invalid">Register</button> &nbsp;
-            <a [routerLink]="['/userlogin']"> Existing  User? Login here</a>
+            <button  class="btn btn-success" style="font-size: 20px; " [disabled]="regform.form.invalid">Register</button> &nbsp;
+            <a [routerLink]="['/userlogin']" style="font-size: 17px; "> Existing  User? Login here</a>
 
           </form>
         </div>

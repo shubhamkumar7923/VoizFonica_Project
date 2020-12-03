@@ -20,36 +20,35 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <button type="button" class="btn btn-dark btn-lg" (click)="gotoprofile()">Profile</button>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">VIEW PLANS <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-1">
-        <button type="button" class="btn btn-link btn-md" style="color: black;" (click)="gotopre()">Prepaid</button><br>
-        <button type="button" class="btn btn-link btn-md" style="color: black;" (click)="gotopost()">Postpaid</button><br>
-        <button type="button" class="btn btn-link btn-md" style="color: black; " (click)="gotodongle()">Dongle</button>
+    
+    <button type="button" class="btn btn-dark btn-lg float-right" (click)="gotologout()">Logout</button>
+    <button type="button" class="btn btn-dark btn-lg float-right" (click)="gotochat()">Chat</button>
+    <button type="button" class="btn btn-dark btn-lg float-right" (click)="gotofaq()">FAQ</button>
+    <button type="button" class="btn btn-dark btn-lg float-right" (click)="gototransaction()">Transaction</button>
+    
+    <button type="button" class="btn btn-dark btn-lg float-right" (click)="gotooffers()">Offers</button>
+    <button type="button" class="btn btn-dark btn-lg float-right" (click)="gotoprofile()">Profile</button>
+    <div class="w3-dropdown-hover w3-hide-small float-right">
+      <button class="w3-padding-large w3-button btn-lg " title="More" >View Plan<i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-3">
+        <button type="button" class="btn btn-link btn-lg" style="color: black;" (click)="gotopre()">Prepaid</button><br>
+        <button type="button" class="btn btn-link btn-lg" style="color: black;" (click)="gotopost()">Postpaid</button><br>
+        <button type="button" class="btn btn-link btn-lg" style="color: black; " (click)="gotodongle()">Dongle</button><br>
       </div>
     </div>
-    <button type="button" class="btn btn-dark btn-lg" (click)="gotooffers()">Offers</button>
-    <button type="button" class="btn btn-dark btn-lg" (click)="gototransaction()">Transaction</button>
-    <button type="button" class="btn btn-dark btn-lg" (click)="gotofaq()">FAQ</button>
-    <button type="button" class="btn btn-dark btn-lg" (click)="gotochat()">Chat</button>
     
-    <button type="button" class="btn btn-dark btn-lg" (click)="gotologout()">Logout</button>
+    <!-- <button type="button" class="btn btn-dark btn-lg"><a href="https://www.speedtest.net/" target="_blank">SpeedTest</a></button> -->
 
-    
-    
   </div>
 </div>
-
-
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  
+  <br><br><br>
 
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">VOIZFONICA</h2>
+    <h1 class="w3-wide">VOIZFONICA</h1>
     <p class="w3-opacity"><i></i></p>
     <h3>VoizFonica is a Mobile Network Operator and telephone company established in 2010, provides network access and telecommunication services that help people and companies communicate in an easy, efficient and environmentally friendly way.
 

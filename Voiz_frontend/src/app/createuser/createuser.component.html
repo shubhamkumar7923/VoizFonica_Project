@@ -1,7 +1,7 @@
 <app-loginsuccess></app-loginsuccess>
 <div class="body">
 <div class="container">
-  <h2 style="text-align:center;color: darkmagenta;">Create User</h2>
+  <h1 style="text-align:center;color: darkmagenta;">Create User</h1>
   <div [hidden]="submitted" style="width: 400px;">
     <form #regform="ngForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
@@ -43,7 +43,7 @@
           <input type="password" class="form-control" id="cpwd" name="cpwd" [(ngModel)]="employee.password">
         </div>
   
-      <button class="btn btn-success" style="font-size: medium;" [disabled]="regform.form.invalid">Submit</button>
+      <button class="btn btn-success" style="font-size: 20px;" [disabled]="regform.form.invalid">Submit</button>
     </form>
   </div>
   </div>
